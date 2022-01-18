@@ -9,7 +9,7 @@ function addition(arrFirst, arrSecond) {
         } else if (arrSecond.length === DEFAULT_NUMB) {
             return arrFirst;
         } else if (arrFirst.length === DEFAULT_NUMB && arrSecond.length === DEFAULT_NUMB) {
-           return [];
+            return [];
         } else {
             return getAnswer(getNumberFromArr(arrFirst), getNumberFromArr(arrSecond));
         }
@@ -51,8 +51,7 @@ function getAnswer(nfirstNum, nsecondNum) {
             if ((BigInt(sfirstNum[i]) + BigInt(ssecondNum[i])) > 9) units += 1;
             else units += " ";
         }
-    }
-    else {
+    } else {
         for (let i = 0; i < sfirstNum.length; i++) {
             if ((BigInt(sfirstNum[i]) + BigInt(ssecondNum[i])) > 9) units += 1;
             else units += " ";
