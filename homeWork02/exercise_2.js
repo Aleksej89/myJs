@@ -25,6 +25,7 @@ function isAN(value) {
     if (value instanceof Number)
         value = value.valueOf();
     return isFinite(value) && value === parseInt(value, 10);
-}
+};
+
 console.log(funk(1,2,3,4));
 console.log(funk(1,2,'s',4));
