@@ -11,8 +11,7 @@ function funk(numb) {
 
 function isAN(value) {
     if (value instanceof Number)
-        value = value.valueOf(); // Если это объект числа, то берём значение, которое и будет числом
-
+        value = value.valueOf();
     return isFinite(value) && value === parseInt(value, 10);
 }
 
