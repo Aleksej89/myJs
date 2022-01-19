@@ -4,14 +4,16 @@ const DEFAULT_VALUE = 0;
 
 function addition(arrFirst, arrSecond) {
     if (Array.isArray(arrFirst) && Array.isArray(arrSecond)) {
-        if (arrFirst.length === DEFAULT_VALUE) {
-            return arrSecond;
-        } else if (arrSecond.length === DEFAULT_VALUE) {
-            return arrFirst;
-        } else if (arrFirst.length === DEFAULT_VALUE && arrSecond.length === DEFAULT_VALUE) {
+        if (arrFirst.length === DEFAULT_VALUE && arrSecond.length === DEFAULT_VALUE) {
             return [];
         } else {
-            return getAnswer(arrFirst, arrSecond);
+            if (arrFirst.length === DEFAULT_VALUE) {
+                return arrSecond;
+            } else if (arrSecond.length === DEFAULT_VALUE) {
+                return arrFirst;
+            } else {
+                return getAnswer(arrFirst, arrSecond);
+            }
         }
     } else {
         throw new Error("One of the arguments is not Array");
