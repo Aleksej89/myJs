@@ -37,12 +37,6 @@ function getNumberStrFromArr(arr) {
 function getAnswerArr(numeratorStr, denominatorStr) {
     let numerator = BigInt(numeratorStr);
     let denominator = BigInt(denominatorStr);
-    if (!numerator) {
-        numerator = DEFAULT_VALUE;
-    }
-    if (!denominator) {
-        denominator = DEFAULT_VALUE;
-    }
     let tempValue = DEFAULT_VALUE;
     if (denominator > numerator) {
         tempValue = denominator;
