@@ -21,24 +21,8 @@ function addition(arrFirst, arrSecond) {
 };
 
 function getAnswer(arrFirst, arrSecond) {
-    return getAnswerArr(getNumberStrFromArr(arrFirst), getNumberStrFromArr(arrSecond));
-};
-
-function getNumberStrFromArr(arr) {
-    let number = "";
-    if (arr.length !== DEFAULT_VALUE) {
-        for (let i = DEFAULT_VALUE; i < arr.length; i++) {
-            if (typeof arr[i] === "number") {
-                number += arr[i];
-            }
-        }
-    }
-    return number;
-};
-
-function getAnswerArr(numeratorStr, denominatorStr) {
-    let numerator = BigInt(numeratorStr);
-    let denominator = BigInt(denominatorStr);
+    let numerator = BigInt(getNumberStrFromArr(arrFirst));
+    let denominator = BigInt(getNumberStrFromArr(arrSecond));
     let tempValue = DEFAULT_VALUE;
     if (denominator > numerator) {
         tempValue = denominator;
@@ -64,7 +48,19 @@ function getAnswerArr(numeratorStr, denominatorStr) {
         answer[i] = Number(answer[i]);
     }
     return answer;
-}
+};
+
+function getNumberStrFromArr(arr) {
+    let number = "";
+    if (arr.length !== DEFAULT_VALUE) {
+        for (let i = DEFAULT_VALUE; i < arr.length; i++) {
+            if (typeof arr[i] === "number") {
+                number += arr[i];
+            }
+        }
+    }
+    return number;
+};
 
 console.log(addition([2, 4, 3], [5, 6, 4]));
 console.log(addition([1, 4, 5], [4, 4, 2]));
