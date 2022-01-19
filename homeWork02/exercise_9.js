@@ -33,12 +33,12 @@ function getAnswer(arrFirst, arrSecond) {
     let strDenominator = String(denominator);
     let units = "";
     if (strNumerator.length > strDenominator.length) {
-        for (let i = 0; i < strDenominator.length; i++) {
+        for (let i = DEFAULT_VALUE; i < strDenominator.length; i++) {
             if ((BigInt(strNumerator[i]) + BigInt(strDenominator[i])) > 9) units += 1;
             else units += " ";
         }
     } else {
-        for (let i = 0; i < strNumerator.length; i++) {
+        for (let i = DEFAULT_VALUE; i < strNumerator.length; i++) {
             if ((BigInt(strNumerator[i]) + BigInt(strDenominator[i])) > 9) units += 1;
             else units += " ";
         }
