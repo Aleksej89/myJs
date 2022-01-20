@@ -54,12 +54,18 @@ function getNumberStrFromArr(arr) {
     let number = "";
     if (arr.length !== DEFAULT_VALUE) {
         for (let i = DEFAULT_VALUE; i < arr.length; i++) {
-            if (typeof arr[i] === "number") {
+            if (isAN(arr[i])) {
                 number += arr[i];
             }
         }
     }
     return number;
+};
+
+function isAN(value) {
+    if (value instanceof Number)
+        value = value.valueOf();
+    return isFinite(value) && value === parseInt(value, 10);
 };
 
 console.log(addition([2, 4, 3], [5, 6, 4]));
