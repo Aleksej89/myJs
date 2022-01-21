@@ -2,8 +2,7 @@
 
 function funk(numb) {
     if (isAN(numb)) {
-        let answer = Math.pow(numb, 3);
-        return answer;
+        return Math.pow(numb, 3);
     } else {
         throw new Error("parameter type is not a Number");
     }
