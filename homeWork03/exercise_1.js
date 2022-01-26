@@ -10,12 +10,14 @@ function forEach(arr, muFunk) {
     }
 }
 
+function log(item, i, arr) {
+    console.log(i + ": " + item + " (in Array " + arr + ")");
+}
+
 function isFunction(param) {
     return typeof param === "function";
 }
 
 let arr = [1, 2, 3];
 
-forEach(arr, (item, i, arr) => {
-    console.log(i + ": " + item + " (in Array " + arr + ")");
-});
+forEach(arr, log);
