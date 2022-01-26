@@ -3,7 +3,7 @@
 function forEach(arr, muFunk) {
     if (Array.isArray(arr) && isFunction(muFunk)) {
         for (let i = 0; i < arr.length; i++) {
-            muFunk(arr, i, arr);
+            muFunk(arr[i], i, arr);
         }
     } else {
         throw new Error("Check your parameters!");
