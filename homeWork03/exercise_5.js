@@ -35,7 +35,7 @@ function isString(value) {
 }
 
 let arr = [1, 2, 3];
-let acc = "0";
+let acc = "string with numbers ->";
 
 acc = reduce(arr, addition, acc);
 
