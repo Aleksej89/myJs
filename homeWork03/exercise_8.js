@@ -1,8 +1,8 @@
 "use strict";
 
 function summArr(arr) {
-    let sum = 0;
     if (Array.isArray(arr)) {
+        let sum = 0;
         if (arr.length === 0) {
             sum = 0;
         } else {
