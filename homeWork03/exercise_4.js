@@ -3,7 +3,7 @@
 function some(arr, filterFunc) {
     if (Array.isArray(arr) && isFunction(filterFunc)) {
         for (let i = 0; i < arr.length; i++) {
-            if (filterFunc(arr[i])) return true;
+            if (filterFunc(arr[i],i,arr)) return true;
         }
         return false;
     } else {
