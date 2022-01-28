@@ -9,7 +9,7 @@ function reduce(arr, filterFunc, acc) {
     } else {
         throw new Error("Check your parameters!");
     }
-}
+};
 
 function addition(add, i, arr, result) {
     return result + add;

@@ -3,7 +3,7 @@
 function every(arr, filterFunc) {
     if (Array.isArray(arr) && isFunction(filterFunc)) {
         for (let i = 0; i < arr.length; i++) {
-            if (!filterFunc(arr[i],i,arr)) return false;
+            if (!filterFunc(arr[i], i, arr)) return false;
         }
         return true;
     } else {
