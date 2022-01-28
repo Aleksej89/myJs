@@ -5,7 +5,7 @@
 function reduceRight(arr, filterFunc, acc) {
     if (Array.isArray(arr) && isFunction(filterFunc) && isNormParam(acc)) {
         for (let i = arr.length - 1; i >= 0; i--) {
-            acc = filterFunc(arr[i], acc);
+            acc = filterFunc(arr[i], i, arr, acc);
         }
         return acc;
     } else {
@@ -13,7 +13,7 @@ function reduceRight(arr, filterFunc, acc) {
     }
 }
 
-function addition(add, result) {
+function addition(add, i, arr, result) {
     return result + add;
 }
 
